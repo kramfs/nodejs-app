@@ -1,0 +1,44 @@
+version: "3"
+services:
+  mysql:
+    env_file: ./.env
+    image: mysql:5.7
+    container_name: mysql
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./db_schema:/docker-entrypoint-initdb.d
+    restart: always
+    networks:
+      - backend_net
+  node-app:
+    build:
+      context: ./src
+    image: nodejs-app
+    container_name: node-app
+    restart: on-failure
+    networks:
+      - frontend_net
+      - backend_net
+    env_file: ./.env
+    environment:
+      WAIT_HOSTS: mysql:3306
+    depends_on:
+      - mysql
+  nginx-proxy:
+    build:
+      context: ./nginx
+    image: nginx-proxy:latest
+    container_name: proxy-app
+    restart: on-failure
+    ports:
+      - "8000:80"
+      - "8443:443"
+    networks:
+      - frontend_net
+volumes:
+  mysql-data:
+
+# Bridged network for the deployment
+networks:
+  frontend_net:
+  backend_net:
