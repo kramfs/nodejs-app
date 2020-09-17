@@ -19,7 +19,7 @@ A very crude and simple nodejs application that process URL string query and act
 
 ## Installation
 
-1. Clone the repo: `git clone` 
+1. Clone the repo: `git clone git@github.com:kramfs/nodejs-app.git` 
 2. Chdir to the cloned repo: `cd nodejs-app`
 3. This utilizes a docker-compose build to create the application and uses an environment variable file to populate the needed data. Rename the `.env.template` to `.env`.
 4. Populate the `.env` file, basically, credentials for the MySQL database which is sensitive info and the file is shared with the nodejs-app so it can connect to the database. When updating the DB credentials, we only change in one place.
