@@ -13,14 +13,6 @@ router.get('/', function(req, res, next) {
     res.send(result);
     res.end();
 
-//      if(err) {
-//          req.flash('error', err);
-//          // render to views/books/index.ejs
-//          res.render('books',{data:''});
-//      } else {
-//          // render to views/books/index.ejs
-//          res.render('books',{data:rows});
-//      }
   });
 });
 
