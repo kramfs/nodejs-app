@@ -12,3 +12,6 @@ ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait
 RUN chmod +x /wait
 
 EXPOSE 80 443
+
+# TODO: Wait for the app to available before starting
+#CMD /wait && nginx -s reload
