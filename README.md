@@ -12,7 +12,7 @@ A very crude and simple nodejs application that process URL string query and act
 - Datastore is a MySQL database using the `MYSQL_USER`/`MYSQL_PASSWORD` credential. The `MYSQL_ROOT_PASSWORD` is randomly generated.
     
 
-## Pre-requisite
+## Prerequisite
 1. Docker
 2. Docker compose
 3. Free port 8000 and 8443 on the local machine. The ports can be customized in the docker-compose if needed.
