@@ -9,5 +9,5 @@ run:
 	build/run.sh
 
 clean:
-	@echo = "Wrapping up, cleaning files..."
+	@echo "Wrapping up, cleaning files..."
 	docker-compose down && docker volume rm nodejs-app_mysql-data
