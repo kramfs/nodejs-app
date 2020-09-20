@@ -47,7 +47,7 @@ MAKEFILE
 
 ## TODO
 
-Adopt the docker-compose file and create a deployment plan for Kubernetes
+Adopt the docker-compose file to Kubernetes manifest
 
 ## History
 
