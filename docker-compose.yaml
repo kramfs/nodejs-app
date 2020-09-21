@@ -37,7 +37,7 @@ services:
       - node-app
     networks:
       - frontend_net
-    environment:
+#    environment:
 #      WAIT_HOSTS: node-app:5000
 volumes:
   mysql-data:
