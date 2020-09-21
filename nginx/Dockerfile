@@ -13,5 +13,7 @@ RUN chmod +x /wait
 
 EXPOSE 80 443
 
+#HEALTHCHECK --interval=60s CMD curl -Ik https://localhost:443 || exit 1
+
 # TODO: Wait for the app to available before starting
 #CMD /wait && nginx -s reload

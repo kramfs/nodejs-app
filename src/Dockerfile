@@ -16,5 +16,7 @@ COPY --chown=node:node . .
 
 EXPOSE 5000
 
+#HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD wget -q localhost:5000/users && rm users
+
 #ENTRYPOINT [ "npm", "start" ]
 CMD /wait && npm start
