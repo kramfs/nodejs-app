@@ -35,13 +35,12 @@ MAKEFILE
 
 ## Usage
 
- `/GET` https://localhost:8443/ - index site
-        
- `/GET` https://localhost:8443/users - Main page for showing users record.
-        
- `/GET` https://localhost:8443/users/get?username=johnd - Search for a user based on the username and return the full name. If there is no record exist for the user, display a user not found message.
-        
- `/POST` https://localhost:8443/users/set?username=johnd&name=John&lastname=Doe - Expect 3 inputs with `key=value` format and delimited by `&` ampersand. Gather the inputs and save them to the database.
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| `/GET` | https://localhost:8443/ | - index site |
+| `/GET` | /users | - Main page for showing users record. |
+| `/GET` | /users/get?username=johnd | - Search for a user based on the username and return the full name. If there is no record exist for the user, display a user not found message. |
+| `/POST` | /users/set?username=johnd&name=John&lastname=Doe | - Expect 3 inputs with `key=value` format and delimited by `&` ampersand. Gather the inputs and save them to the database. |
 
 
 
