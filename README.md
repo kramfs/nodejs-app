@@ -22,7 +22,7 @@ A very crude and simple nodejs application that process URL string query and act
 DOCKER-COMPOSE
 1. Clone the repo: `git clone https://github.com/kramfs/nodejs-app.git`
 2. Chdir to the cloned repo: `cd nodejs-app`
-3. Rename the `.env.template` to `.env`. This utilizes a docker-compose build to create the application and uses an environment variable file to populate the needed data. This is the credentials for the MySQL database which is sensitive info and the file is shared with the nodejs-app so it can connect to the database.
+3. Copy the `.env.template` to `.env` with `cp -vf .env.template .env'. This utilizes a docker-compose build to create the application and uses an environment variable file to populate the needed data. This is the credentials for the MySQL database which is sensitive info and the file is shared with the nodejs-app so it can connect to the database. --FOR THIS EXERCISE: DON'T CHANGE THE CONTENT OF THE .env--
 4. That's it, let build the app: `docker-compose build`
 5. Run the app: `docker-compose up`. Add `-d` parameter to run in daemon mode.
 6. Clean up - stop by interrupting the process with `ctrl`+`c` or `docker-compose down` if run with `-d` parameter
