@@ -11,3 +11,4 @@ run:
 clean:
 	@echo "Wrapping up, cleaning files..."
 	docker-compose down && docker volume rm nodejs-app_mysql-data
+	git clean -fdx
