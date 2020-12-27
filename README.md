@@ -2,7 +2,7 @@
   <content><![CDATA[
 # ${1:Project Name}
 
-A very crude and simple nodejs application that process URL string query and act on the content. This is tested on a Mac but should work on a Linux and Windows docker.
+A very crude and simple nodejs application that process URL string query and act on the content.
 
 - Frontend is served by nginx over port 8000-HTTP and 8443-HTTPS (self-signed cert) running under the 
 `nginx` user. This is publicly exposed and accessible to the user.
